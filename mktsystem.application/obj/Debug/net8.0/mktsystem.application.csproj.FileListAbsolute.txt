@@ -13,3 +13,4 @@
 /Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/obj/Debug/net8.0/refint/mktsystem.application.dll
 /Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/obj/Debug/net8.0/mktsystem.application.pdb
 /Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/obj/Debug/net8.0/ref/mktsystem.application.dll
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/obj/Debug/net8.0/mktsystem.application.sourcelink.json

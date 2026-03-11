@@ -9,3 +9,4 @@
 /Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.domain/obj/Debug/net8.0/refint/mktsystem.domain.dll
 /Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.domain/obj/Debug/net8.0/mktsystem.domain.pdb
 /Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.domain/obj/Debug/net8.0/ref/mktsystem.domain.dll
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.domain/obj/Debug/net8.0/mktsystem.domain.sourcelink.json
