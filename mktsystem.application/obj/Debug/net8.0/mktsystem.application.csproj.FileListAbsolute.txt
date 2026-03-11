@@ -1,0 +1,15 @@
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/bin/Debug/net8.0/mktsystem.application.deps.json
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/bin/Debug/net8.0/mktsystem.application.dll
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/bin/Debug/net8.0/mktsystem.application.pdb
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/bin/Debug/net8.0/mktsystem.domain.dll
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/bin/Debug/net8.0/mktsystem.domain.pdb
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/obj/Debug/net8.0/mktsystem.application.csproj.AssemblyReference.cache
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/obj/Debug/net8.0/mktsystem.application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/obj/Debug/net8.0/mktsystem.application.AssemblyInfoInputs.cache
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/obj/Debug/net8.0/mktsystem.application.AssemblyInfo.cs
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/obj/Debug/net8.0/mktsystem.application.csproj.CoreCompileInputs.cache
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/obj/Debug/net8.0/mktsyste.F25C428F.Up2Date
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/obj/Debug/net8.0/mktsystem.application.dll
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/obj/Debug/net8.0/refint/mktsystem.application.dll
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/obj/Debug/net8.0/mktsystem.application.pdb
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem.application/obj/Debug/net8.0/ref/mktsystem.application.dll

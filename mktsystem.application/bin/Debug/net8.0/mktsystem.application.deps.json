@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "mktsystem.application/1.0.0": {
+        "dependencies": {
+          "mktsystem.domain": "1.0.0"
+        },
+        "runtime": {
+          "mktsystem.application.dll": {}
+        }
+      },
+      "mktsystem.domain/1.0.0": {
+        "runtime": {
+          "mktsystem.domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "mktsystem.application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "mktsystem.domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
