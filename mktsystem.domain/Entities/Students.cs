@@ -4,7 +4,7 @@ public class Students
 {
     public int Id { get; set; }
     public string Name { get; set; }
-    public string IC_Number { get; set; }
+    public string IcNumber { get; set; }
     public string Class { get; set; }
     public int Year { get; set; }
     public List<Payments> Payments { get; set; } = new List<Payments>();

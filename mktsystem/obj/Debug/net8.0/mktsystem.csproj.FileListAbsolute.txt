@@ -118,3 +118,12 @@
 /Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem/bin/Debug/net8.0/DotNetEnv.dll
 /Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem/bin/Debug/net8.0/Sprache.dll
 /Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem/obj/Debug/net8.0/mktsystem.sourcelink.json
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem/bin/Debug/net8.0/AutoMapper.dll
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem/bin/Debug/net8.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem/bin/Debug/net8.0/MediatR.dll
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem/bin/Debug/net8.0/MediatR.Contracts.dll
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/Users/firdauslahmuddin/Desktop/MKT System/mktsystem/mktsystem/bin/Debug/net8.0/System.Diagnostics.DiagnosticSource.dll

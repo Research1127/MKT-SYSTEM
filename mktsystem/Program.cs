@@ -3,6 +3,7 @@ using mktsystem.infrastructure.Extensions;
 using mktsystem.infrastructure.Persistence;
 
 using DotNetEnv;
+using mktsystem.application.Extensions;
 
 Env.Load();
 var builder = WebApplication.CreateBuilder(args);
@@ -12,10 +13,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddControllers(); // Important
+
+builder.Services.AddApplication(); // Because of our new ServiceCollectionExtensions in Application Module
+
 // Register Service Collection Infrastructure layer
 builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
+
+
 
 // Run migrations automatically
 using (var scope = app.Services.CreateScope())
@@ -33,5 +40,5 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-
+app.MapControllers(); // Important
 app.Run();
