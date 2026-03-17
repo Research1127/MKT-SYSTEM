@@ -11,6 +11,7 @@ public class StudentRepository(MktSystemDbContext dbContext) : IStudentRepositor
     {
         return await dbContext.Students
             .Include(s => s.Payments)
+            .Include(s => s.Class)
             .FirstOrDefaultAsync(s => s.IcNumber == icNumber, cancellationToken);
     }
 }

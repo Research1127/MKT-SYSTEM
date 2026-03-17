@@ -1,6 +1,12 @@
 @mktsystem_HostAddress = http://localhost:5288
 
-GET {{mktsystem_HostAddress}}/weatherforecast/
-Accept: application/json
+
 
 ###
+GET {{mktsystem_HostAddress}}/api/payments/970321112345
+Accept: application/json
+
+
+###
+GET {{mktsystem_HostAddress}}/api/payments/980123112345
+Accept: application/json

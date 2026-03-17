@@ -5,4 +5,7 @@ public class StudentPaymentResponseDto
     public string Name { get; set; } = string.Empty;
     public string IcNumber { get; set; } = string.Empty;
     public List<PaymentDto> Payments { get; set; } = new();
+    
+    public decimal TotalDue { get; set; }
+    public decimal TotalOutstanding { get; set; }
 }

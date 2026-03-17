@@ -12,6 +12,7 @@ public class MktSystemDbContext : DbContext
     
     public DbSet<Students> Students  { get; set; }
     public DbSet<Payments> Payments  { get; set; }
+    public DbSet<Classes> Classes { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -21,6 +22,12 @@ public class MktSystemDbContext : DbContext
             .HasOne(c => c.Student)
             .WithMany(p  => p.Payments)
             .HasForeignKey(k => k.StudentId)
+            .OnDelete(DeleteBehavior.Cascade);
+        
+        modelBuilder.Entity<Students>()
+            .HasOne(c => c.Class)
+            .WithMany(p => p.Students)
+            .HasForeignKey(k => k.ClassId)
             .OnDelete(DeleteBehavior.Cascade);
     }
 

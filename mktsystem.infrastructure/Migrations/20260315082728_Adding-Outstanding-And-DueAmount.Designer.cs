@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using mktsystem.infrastructure.Persistence;
@@ -11,9 +12,11 @@ using mktsystem.infrastructure.Persistence;
 namespace mktsystem.infrastructure.Migrations
 {
     [DbContext(typeof(MktSystemDbContext))]
-    partial class MktSystemDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260315082728_Adding-Outstanding-And-DueAmount")]
+    partial class AddingOutstandingAndDueAmount
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,32 +24,6 @@ namespace mktsystem.infrastructure.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
-
-            modelBuilder.Entity("mktsystem.domain.Entities.Classes", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<decimal>("MonthlyFee")
-                        .HasColumnType("numeric");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Classes");
-                });
 
             modelBuilder.Entity("mktsystem.domain.Entities.Payments", b =>
                 {
@@ -59,10 +36,13 @@ namespace mktsystem.infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<decimal>("DueAmount")
+                        .HasColumnType("numeric");
+
                     b.Property<int>("Month")
                         .HasColumnType("integer");
 
-                    b.Property<decimal>("PaidAmount")
+                    b.Property<decimal>("OutstandingAmount")
                         .HasColumnType("numeric");
 
                     b.Property<int>("PaymentStatus")
@@ -92,8 +72,9 @@ namespace mktsystem.infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ClassId")
-                        .HasColumnType("integer");
+                    b.Property<string>("Class")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
@@ -114,8 +95,6 @@ namespace mktsystem.infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClassId");
-
                     b.ToTable("Students");
                 });
 
@@ -128,22 +107,6 @@ namespace mktsystem.infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("Student");
-                });
-
-            modelBuilder.Entity("mktsystem.domain.Entities.Students", b =>
-                {
-                    b.HasOne("mktsystem.domain.Entities.Classes", "Class")
-                        .WithMany("Students")
-                        .HasForeignKey("ClassId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Class");
-                });
-
-            modelBuilder.Entity("mktsystem.domain.Entities.Classes", b =>
-                {
-                    b.Navigation("Students");
                 });
 
             modelBuilder.Entity("mktsystem.domain.Entities.Students", b =>

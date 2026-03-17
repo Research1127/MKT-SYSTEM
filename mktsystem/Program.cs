@@ -4,6 +4,7 @@ using mktsystem.infrastructure.Persistence;
 
 using DotNetEnv;
 using mktsystem.application.Extensions;
+using mktsystem.domain.Seeders;
 
 Env.Load();
 var builder = WebApplication.CreateBuilder(args);
@@ -20,15 +21,32 @@ builder.Services.AddApplication(); // Because of our new ServiceCollectionExtens
 // Register Service Collection Infrastructure layer
 builder.Services.AddInfrastructure(builder.Configuration);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:5173")
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+});
+
 var app = builder.Build();
 
 
+
+
+// Allow CORS
+app.UseCors("AllowReactApp");
 
 // Run migrations automatically
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<MktSystemDbContext>();
     dbContext.Database.Migrate();
+    var seeder = scope.ServiceProvider.GetRequiredService<IClassSeeder>();
+    await seeder.Seed();
 }
 
 // Configure the HTTP request pipeline.
