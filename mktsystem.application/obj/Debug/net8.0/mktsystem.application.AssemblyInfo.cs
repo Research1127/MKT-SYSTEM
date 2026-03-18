@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("mktsystem.application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89ea1c0bd2b1675ce90503fad0e70c0ea346e505")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb9c2ced99ae47e5b097ae01d4702aaaa3efef2f")]
 [assembly: System.Reflection.AssemblyProductAttribute("mktsystem.application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("mktsystem.application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
