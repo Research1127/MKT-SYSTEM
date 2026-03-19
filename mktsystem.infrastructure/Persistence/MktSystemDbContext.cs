@@ -13,6 +13,7 @@ public class MktSystemDbContext : DbContext
     public DbSet<Students> Students  { get; set; }
     public DbSet<Payments> Payments  { get; set; }
     public DbSet<Classes> Classes { get; set; }
+    public DbSet<Fee> Fees { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -13,6 +13,16 @@ public class Students
     public Classes Class { get; set; } // optional navigation property
 
     public int Year { get; set; }
+    
+    // Extra student info
+    public string Address { get; set; } = string.Empty;
+    public string Area { get; set; } = string.Empty;
+    public string PhoneNumber { get; set; } = string.Empty;
+    public string School { get; set; } = string.Empty;
+    public string FatherJob { get; set; } = string.Empty;
+    public string MotherJob { get; set; } = string.Empty;
+    public decimal FamilyIncome { get; set; }
+    public int SiblingsCount  { get; set; }
     public List<Payments> Payments { get; set; } = new List<Payments>();
     public DateTime CreatedAt { get; set; }
     public DateTime? UpdatedAt { get; set; }

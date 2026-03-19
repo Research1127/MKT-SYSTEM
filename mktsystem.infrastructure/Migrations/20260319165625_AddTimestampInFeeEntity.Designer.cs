@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using mktsystem.infrastructure.Persistence;
@@ -11,9 +12,11 @@ using mktsystem.infrastructure.Persistence;
 namespace mktsystem.infrastructure.Migrations
 {
     [DbContext(typeof(MktSystemDbContext))]
-    partial class MktSystemDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260319165625_AddTimestampInFeeEntity")]
+    partial class AddTimestampInFeeEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -72,7 +75,7 @@ namespace mktsystem.infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime?>("UpdatedAt")
+                    b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
