@@ -14,4 +14,14 @@ public class StudentRepository(MktSystemDbContext dbContext) : IStudentRepositor
             .Include(s => s.Class)
             .FirstOrDefaultAsync(s => s.IcNumber == icNumber, cancellationToken);
     }
+
+    public async Task<decimal> GetFeeAmount(decimal familyIncome, CancellationToken cancellationToken)
+    {
+        var fee = await dbContext.Fees
+            .FirstOrDefaultAsync(f => familyIncome >= f.MinIncome &&
+                                      (f.MaxIncome == null || familyIncome <= f.MaxIncome),
+                cancellationToken);
+
+        return fee?.FeeAmount ?? 0;
+    }
 }

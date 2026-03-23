@@ -1,4 +1,7 @@
-1. Create a new column in student entity
-2. Create a new entity which is FeeRules 
-3. Insert data into our database using Python
-4. 
+1. Transform Payment Excel Data to Database Format
+- Need to understand tunggakan vs tunggakan yuran 2025
+
+
+
+
+Setup Class ID in Student Table

@@ -1,6 +1,7 @@
 using MediatR;
 using Microsoft.Extensions.Logging;
 using mktsystem.application.Dtos;
+using mktsystem.domain.Entities;
 using mktsystem.domain.Repositories;
 
 namespace mktsystem.application.StudentPayment;
@@ -22,7 +23,9 @@ public class StudentPaymentQueryHandler(
             return null;
         }
 
-        var monthlyFee = student.Class.MonthlyFee;
+       
+        // Get MonthlyFee from Fee Table
+        var monthlyFee = await studentRepository.GetFeeAmount(student.FamilyIncome,cancellationToken);
 
         decimal totalDue = 0;
         decimal totalOutstanding = 0;
