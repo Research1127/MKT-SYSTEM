@@ -26,7 +26,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowReactApp",
         policy =>
         {
-            policy.WithOrigins("https://mkt-system-react.vercel.app/")
+            policy.WithOrigins("https://mkt-system-react.vercel.app")
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
