@@ -5,6 +5,7 @@ bin/
 obj/
 out/
 publish/
+Logs/
 
 # ======================================
 # Visual Studio / JetBrains Rider / VSCode
