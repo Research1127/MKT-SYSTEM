@@ -6,10 +6,12 @@ namespace mktsystem.Controllers;
 [Route("api/health")]
 public class HealthController : ControllerBase
 {
-    // Simple GET endpoint for uptime monitoring
+
+    // GET request
     [HttpGet]
-    public IActionResult Get()
-    {
-        return Ok("Healthy");
-    }
+    public IActionResult Get() => Ok("Healthy");
+
+    // HEAD request (UptimeRobot sometimes uses this)
+    [HttpHead]
+    public IActionResult Head() => Ok();
 }
