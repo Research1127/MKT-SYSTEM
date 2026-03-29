@@ -70,6 +70,12 @@ public class StudentPaymentQueryHandler(
 
         // Overall Status
         string overallStatus;
+        
+        //Check The Paid Status and CanSubmitForm or not
+        var isFullyPaid = totalOutstanding <= 0;
+        var canSubmitForm = isFullyPaid;
+        
+        
         if (totalPaid == 0)
             overallStatus = "No fees have been paid yet";
         else if (totalPaid < totalDue)
@@ -86,7 +92,9 @@ public class StudentPaymentQueryHandler(
             TotalPaid = totalPaid,
             TotalDue = totalDue,
             TotalOutstanding = totalOutstanding,
-            OverallStatus = overallStatus
+            OverallStatus = overallStatus,
+            IsFullyPaid = isFullyPaid,
+            CanSubmitForm = canSubmitForm
         };
     }
 }

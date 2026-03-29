@@ -11,5 +11,9 @@ public class StudentPaymentResponseDto
     public decimal TotalDue { get; set; }
     public decimal TotalOutstanding { get; set; }
     
+    public bool IsFullyPaid { get; set; }
+    
+    public bool CanSubmitForm { get; set; }
+    
     public string OverallStatus { get; set; } = string.Empty;
 }

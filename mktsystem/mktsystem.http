@@ -16,3 +16,7 @@ Accept: application/json
 ### Ali
 GET {{mktsystem_HostAddress}}/api/payments/990945112345
 Accept: application/json
+
+### Khalifah
+GET {{mktsystem_HostAddress}}/api/payments/190808140373
+Accept: application/json
