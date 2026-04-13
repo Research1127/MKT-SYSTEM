@@ -1,6 +1,5 @@
 @mktsystem_HostAddress = http://localhost:5288
-
-
+@token = CfDJ8AMzeuekkGdKqENm8PsCSeTe_VNd6Zg35PCaXHYFQm2rma6ShL285geTFAEZdEoqdKn4bfdrU9VjfgoHSF65nPCzzolf10IaaUhGyZw2f3OJcAk2ZiFQYDalffuh1ajUrD3zBOla3PcmKngUe_-ti5A4HxkWYo9iLggOXwXkaCiBDOCfMNbO2wJRN2sZaiUvLkopU0zNu7J904NMuMb90a4q34ptduG8L35aSmABeGPhr5p-7Syxu9r2buZQ4av6piFBUxXvCi2XbuxJxSSKyTrC41akp-MHv5WlvscLNI8RB4cFiEVi1hOxcds3KwTR18lYuhqkPyq16_VoDf_Um9W3aykEpVwX_xaTBDxV04KitrfyOIKF5mKzL0Q4Y34aRZb31l51dFEWBKOneOfpu5tF7PF0Fg7R9bpTGTZ-8BpCHXkCRgcl8Q6d4SlJ3pDCIwFw_s4dQRgj8nfFfuj9V2GGCq8u1d4w21HFI3lTXflJP8NjLYb0CU99prTuLQutvZ12EJTXZSzLff7axyaZT4LPWDSR9AOKargEYaES8fHrAGal5w2jwKQmj8HKi4-pj7f_Y-kTm2mWit89ZKlBnJ9gbY1p3CSF4bEkmXHWLcg6fStEvXSuyfF-Wp3lobDsjA5btMi16bRlcXIGe5_fSy5HqW1j40Wge7sFA_MgS7e6sAQyfJI14hSnTavz0c8o_3aMw-RY-5j3TRKjNTgh4fk
 
 ### Ahmad
 GET {{mktsystem_HostAddress}}/api/payments/970321112345
@@ -20,3 +19,32 @@ Accept: application/json
 ### Khalifah
 GET {{mktsystem_HostAddress}}/api/payments/190808140373
 Accept: application/json
+
+### Creating User Part
+POST {{mktsystem_HostAddress}}/register
+Content-Type: application/json
+
+{
+    "email" : "nuruliftitah@test.com",
+    "password" : "Password1!"
+}
+
+### Login User Part
+POST {{mktsystem_HostAddress}}/login
+Content-Type: application/json
+
+{
+    "email" : "nuruliftitah@test.com",
+    "password" : "Password1!"
+}
+
+### Create Attendance
+POST {{mktsystem_HostAddress}}/api/attendance
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "studentId": 1,
+  "classId": 1,
+  "status": 1
+}

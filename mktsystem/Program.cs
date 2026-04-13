@@ -5,6 +5,7 @@ using mktsystem.infrastructure.Persistence;
 using DotNetEnv;
 using mktsystem.application.Extensions;
 using mktsystem.domain.Seeders;
+using mktsystem.domain.Entities;
 
 Env.Load();
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +21,8 @@ builder.Services.AddApplication(); // Because of our new ServiceCollectionExtens
 
 // Register Service Collection Infrastructure layer
 builder.Services.AddInfrastructure(builder.Configuration);
+
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddCors(options =>
 {
@@ -59,5 +62,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+
 app.MapControllers(); // Important
+app.MapIdentityApi<Users>();
 app.Run();
