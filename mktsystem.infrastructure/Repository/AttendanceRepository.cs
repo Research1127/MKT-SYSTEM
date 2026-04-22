@@ -22,5 +22,26 @@ namespace mktsystem.infrastructure.Repository
             await dbContext.Attendances.AddAsync(attendance);
             await dbContext.SaveChangesAsync();
         }
+
+        public async Task AddRange(List<Attendance> attendances)
+        {
+            await dbContext.Attendances.AddRangeAsync(attendances);
+            await dbContext.SaveChangesAsync();
+        }
+
+        public async Task MarkAttendanceAsync(int studentId, DateTime date, int classId, AttendanceStatus status)
+        {
+            var attendance = new Attendance
+            {
+                StudentId = studentId,
+                Date = date,
+                ClassId = classId,
+                Status = status
+
+            };
+
+            dbContext.Attendances.Add(attendance);
+            await dbContext.SaveChangesAsync();
+        }
     }
 }

@@ -1,6 +1,5 @@
 @mktsystem_HostAddress = http://localhost:5288
-@token = CfDJ8AMzeuekkGdKqENm8PsCSeTe_VNd6Zg35PCaXHYFQm2rma6ShL285geTFAEZdEoqdKn4bfdrU9VjfgoHSF65nPCzzolf10IaaUhGyZw2f3OJcAk2ZiFQYDalffuh1ajUrD3zBOla3PcmKngUe_-ti5A4HxkWYo9iLggOXwXkaCiBDOCfMNbO2wJRN2sZaiUvLkopU0zNu7J904NMuMb90a4q34ptduG8L35aSmABeGPhr5p-7Syxu9r2buZQ4av6piFBUxXvCi2XbuxJxSSKyTrC41akp-MHv5WlvscLNI8RB4cFiEVi1hOxcds3KwTR18lYuhqkPyq16_VoDf_Um9W3aykEpVwX_xaTBDxV04KitrfyOIKF5mKzL0Q4Y34aRZb31l51dFEWBKOneOfpu5tF7PF0Fg7R9bpTGTZ-8BpCHXkCRgcl8Q6d4SlJ3pDCIwFw_s4dQRgj8nfFfuj9V2GGCq8u1d4w21HFI3lTXflJP8NjLYb0CU99prTuLQutvZ12EJTXZSzLff7axyaZT4LPWDSR9AOKargEYaES8fHrAGal5w2jwKQmj8HKi4-pj7f_Y-kTm2mWit89ZKlBnJ9gbY1p3CSF4bEkmXHWLcg6fStEvXSuyfF-Wp3lobDsjA5btMi16bRlcXIGe5_fSy5HqW1j40Wge7sFA_MgS7e6sAQyfJI14hSnTavz0c8o_3aMw-RY-5j3TRKjNTgh4fk
-
+@token = CfDJ8AMzeuekkGdKqENm8PsCSeT9UNgWDAk2pFMsZbgME4wfL7rHoh5x2hLKJcVpPF_uK4x9uLNRZj4ZoU7lyHdEp1bvoo_8yBGBGe8OyS0fzfqRRBw3g1pRi2-r5ecCVpmggAl2xOjdRNVfhgS9AdayvA3L4bSAiAom9EKV1IGnEcgy2E7gYD3r-xv_T1kJnxZnm63X6vFNI3gMbQoyf98nFlw248TTxZrlOC1IpA6Xnp1sJ-hiTgoTG0zaeLwpxByC0O2uDo0TxNZkZRHV2Y_a0d-U3YACMW9dhfl_7Oo-nLy5khLzIZ3jvhYnqkHVU_vryNvZkJZR7jziCnGpuTwYW3L9N9yv3hFDzzAjYV7AdzFAOBHDxQ8rWnnX5-WLNNM5kq58LUgqNUw33TCzf7hOv36OcNjP72th7hdkPxair2R-nKf1ZqfSyHLGj5PF6If-I6GtMyPkgzchUvAdMwYIe3vLhLTmrppZxP3rDvQfAAsdaPUdgH-uWb1B1iyvaA04oWNhXQ7xKxxyuRrVAvpTEr-EEzM9TPVSWyvAzEzK_tc37X8R30_CjFGZEpnVn0AD93wyQqVi9eD46SytRbkdSmiskNLHTC-WnYCEySKkS2IfhXirxdYiU17wiY_G1XNm6Rh90AVPDEDReVZXFhC7ND2Lv44EcvmfEm2IUEFFlwpqPbzLunU0omrZ98nBxaozvRcVQ9N9xZFwfOKSx2QZSr0
 ### Ahmad
 GET {{mktsystem_HostAddress}}/api/payments/970321112345
 Accept: application/json
@@ -39,7 +38,7 @@ Content-Type: application/json
 }
 
 ### Create Attendance
-POST {{mktsystem_HostAddress}}/api/attendance
+POST {{mktsystem_HostAddress}}/api/attendance/single
 Authorization: Bearer {{token}}
 Content-Type: application/json
 
@@ -47,4 +46,24 @@ Content-Type: application/json
   "studentId": 1,
   "classId": 1,
   "status": 1
+}
+
+### Create Bulk Attendance
+POST {{mktsystem_HostAddress}}/api/attendance/bulk
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "classId": 2,
+  "date": "2026-04-22T14:42:27.283Z",
+  "studentsRequest": [
+    {
+      "studentId": 2,
+      "status": "absent"
+    },
+    {
+      "studentId": 3,
+      "status": "absent"
+    }
+  ]
 }

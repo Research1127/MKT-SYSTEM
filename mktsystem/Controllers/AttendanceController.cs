@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using mktsystem.application.Attendances.Command;
+using mktsystem.application.Attendances.Command.BulkStudentAttendance;
 
 namespace mktsystem.Controllers;
 
@@ -10,12 +11,19 @@ namespace mktsystem.Controllers;
 [Authorize]
 public class AttendanceController(IMediator mediator) : ControllerBase
 {
-    [HttpPost]
+    [HttpPost("single")]
     public async Task<IActionResult> MarkAttendanceStudent([FromBody] MarkAttendanceCommand command)
     {
         var result = await mediator.Send(command);
         return Ok(result);
 
+    }
+
+    [HttpPost("bulk")]
+    public async Task<IActionResult> BulkMarkAttendanceStudent([FromBody] BulkMarkAttendanceCommand command)
+    {
+        var result = await mediator.Send(command);
+        return Ok(result);
     }
 }
 

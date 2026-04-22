@@ -11,5 +11,9 @@ namespace mktsystem.domain.Repositories
     {
         Task<bool> Exists(int studentId, DateTime date);
         Task Add(Attendance attendance);
+
+        Task AddRange(List<Attendance> attendances);
+
+        Task MarkAttendanceAsync(int studentId, DateTime date, int classId, AttendanceStatus status);
     }
 }
