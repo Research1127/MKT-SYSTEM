@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using mktsystem.application.Interfaces;
 
 namespace mktsystem.application.Extensions;
 
@@ -11,5 +12,6 @@ public static class ServiceCollectionExtensions
         
         
         services.AddAutoMapper(applicationAssembly);
+        
     }
 }

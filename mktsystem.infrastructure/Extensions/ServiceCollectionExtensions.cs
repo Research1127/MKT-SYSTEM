@@ -9,6 +9,8 @@ using mktsystem.infrastructure.Repository;
 using mktsystem.infrastructure.Seeders;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using mktsystem.application.Interfaces;
+using mktsystem.infrastructure.Services;
 
 namespace mktsystem.infrastructure.Extensions;
 
@@ -24,6 +26,7 @@ public static class ServiceCollectionExtensions
         
         services.AddScoped<IStudentRepository, StudentRepository>();
         services.AddScoped<IAttendanceRepository, AttendanceRepository>();
+        services.AddScoped<IExcelService, ExcelService>();
 
         services.AddIdentityApiEndpoints<Users>().AddEntityFrameworkStores<MktSystemDbContext>();
     }

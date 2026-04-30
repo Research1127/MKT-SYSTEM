@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using mktsystem.domain.Entities;
+﻿using mktsystem.domain.Entities;
+
 
 namespace mktsystem.domain.Repositories
 {
@@ -15,5 +11,9 @@ namespace mktsystem.domain.Repositories
         Task AddRange(List<Attendance> attendances);
 
         Task MarkAttendanceAsync(int studentId, DateTime date, int classId, AttendanceStatus status);
+
+        Task<List<Students>> GetStudentsAsync();
+        Task<List<Classes>> GetClassesAsync();
+        Task BulkInsertAsync(List<Attendance> data);
     }
 }
