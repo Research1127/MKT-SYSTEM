@@ -70,16 +70,13 @@ Content-Type: application/json
 }
 
 
-### Excel POST
-POST {{mktsystem_HostAddress}}/api/attendance/excel
-Authorization: Bearer {{token}}
-Content-Type: multipart/form-data; boundary=boundary
+### Prompt AI
+POST {{mktsystem_HostAddress}}/api/gemini
+Content-Type: application/json
 
---boundary
-Content-Disposition: form-data; name="file"; filename="Book1.xlsx"
-Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 
-< ./Book1.xlsx
---boundary--
+ "give me a C# code"
+
+
 
 

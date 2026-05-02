@@ -6,6 +6,8 @@ using DotNetEnv;
 using mktsystem.application.Extensions;
 using mktsystem.domain.Seeders;
 using mktsystem.domain.Entities;
+using mktsystem.application.Interfaces;
+using mktsystem.infrastructure.Services;
 
 Env.Load();
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +16,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddHttpClient<IAIService, GeminiService>();
 
 builder.Services.AddControllers(); // Important
 
