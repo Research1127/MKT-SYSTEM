@@ -27,6 +27,7 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IStudentRepository, StudentRepository>();
         services.AddScoped<IAttendanceRepository, AttendanceRepository>();
         services.AddScoped<IExcelService, ExcelService>();
+        
 
         services.AddIdentityApiEndpoints<Users>().AddEntityFrameworkStores<MktSystemDbContext>();
     }
